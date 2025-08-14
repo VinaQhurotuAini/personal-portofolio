@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import TextType from "../../app/components/TextType/TextType";
+import TextType from "./components/TextType/TextType";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
