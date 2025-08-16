@@ -323,8 +323,8 @@ export default function Home() {
                 </div>
 
                 <div className="text-amber-100 p-4 bg-black/30 rounded-xl hover:bg-black/50 transition-all duration-300">
-                  <div className="text-sm text-amber-200">linkedin</div>
-                  <a href={`tel:${profileData.linkedin}`} className="font-medium hover:text-amber-200">
+                  <div className="text-sm text-amber-200">LinkedIn</div>
+                  <a href={`https://${profileData.linkedin}`} target="_blank" rel="noopener noreferrer" className="font-medium hover:text-amber-200">
                     {profileData.linkedin}
                   </a>
                 </div>
