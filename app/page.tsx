@@ -155,7 +155,7 @@ export default function Home() {
                           {/* Enhanced glow effects */}
                           <div className="absolute inset-0 rounded-full shadow-[0_0_80px_rgba(245,245,220,0.8)] animate-pulse"></div>
                           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-100/20 to-transparent animate-pulse"></div>
-                          <img src="IMG_5802.jpg" alt="Foto Profil Vina Qhurotu Aini" className="w-full h-full object-cover relative z-10" />
+                          <img src="/IMG_5802.jpg" alt="Foto Profil Vina Qhurotu Aini" className="w-full h-full object-cover relative z-10" />
                         </div>
                       </div>
                     </div>
