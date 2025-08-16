@@ -26,6 +26,7 @@ export default function Home() {
     description: "Selamat datang di personal web saya!👋",
     email: "vinaaini70@gmail.com",
     phone: "082254561528",
+    linkedin: "www.linkedin.com/in/vina-qhurotu-aini",
     location: "Yogyakarta, Indonesia",
     skills: ["HTML/CSS", "JavaScript", "React", "Node.js", "PHP", "MySQL"],
     projects: [
@@ -188,12 +189,6 @@ export default function Home() {
 
                   <p className="leading-relaxed">Saya memiliki motivasi tinggi untuk terus belajar dan berkembang, serta semangat untuk memberikan kontribusi nyata di dunia teknologi.</p>
                 </div>
-
-                <div className="flex flex-wrap gap-3 mt-6">
-                  <span className="px-4 py-2 bg-black/10 text-black rounded-full text-sm font-medium">🎓 Mahasiswa Informatika</span>
-                  <span className="px-4 py-2 bg-black/10 text-black rounded-full text-sm font-medium">💻 Web Developer</span>
-                  <span className="px-4 py-2 bg-black/10 text-black rounded-full text-sm font-medium">📱 Mobile Enthusiast</span>
-                </div>
               </div>
 
               <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-amber-200 shadow-xl">
@@ -310,78 +305,47 @@ export default function Home() {
         </section>
 
         {/* Section: Contact */}
-        <section id="contact" className="min-h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-black py-20 relative overflow-hidden">
+        <section id="contact" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black py-20 relative overflow-hidden">
           {/* Background decoration */}
           <div className="absolute inset-0 bg-gradient-to-br from-amber-100/5 to-transparent"></div>
           <div className="absolute top-20 left-20 w-72 h-72 bg-amber-100/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-amber-100/5 rounded-full blur-3xl"></div>
 
-          <div className="max-w-5xl mx-auto px-4 relative z-10">
+          <div className="max-w-3xl w-full mx-auto px-4 relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold text-amber-100 mb-4">Hubungi Saya</h2>
               <div className="w-24 h-1 bg-amber-100 mx-auto"></div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              {/* Contact Info */}
-              <div className="text-amber-100">
-                <h3 className="text-3xl font-semibold mb-6">🤝 Mari Berkolaborasi!</h3>
-                <p className="text-amber-200/90 mb-8 text-lg leading-relaxed">Tertarik untuk bekerja sama? Jangan ragu untuk menghubungi saya. Saya selalu terbuka untuk diskusi proyek baru atau kesempatan kerja yang menarik.</p>
+            {/* Contact Card di tengah */}
+            <div className="bg-gray-900/80 backdrop-blur-sm p-8 rounded-2xl border border-amber-100/30 shadow-2xl text-center">
+              <h4 className="text-2xl font-semibold mb-6 text-amber-100">📞 Kontak Langsung</h4>
 
-                <div className="space-y-4">
-                  <div className="flex items-center text-amber-200">
-                    <span className="text-2xl mr-4">📧</span>
-                    <span className="text-lg">Siap untuk proyek freelance</span>
-                  </div>
-                  <div className="flex items-center text-amber-200">
-                    <span className="text-2xl mr-4">💼</span>
-                    <span className="text-lg">Terbuka untuk kesempatan magang</span>
-                  </div>
-                  <div className="flex items-center text-amber-200">
-                    <span className="text-2xl mr-4">🚀</span>
-                    <span className="text-lg">Kolaborasi proyek inovatif</span>
-                  </div>
+              <div className="space-y-6">
+                <div className="text-amber-100 p-4 bg-black/30 rounded-xl hover:bg-black/50 transition-all duration-300">
+                  <div className="text-sm text-amber-200">Email</div>
+                  <a href={`mailto:${profileData.email}`} className="font-medium hover:text-amber-200">
+                    {profileData.email}
+                  </a>
                 </div>
-              </div>
 
-              {/* Contact Details */}
-              <div className="bg-gray-900/80 backdrop-blur-sm p-8 rounded-2xl border border-amber-100/30 shadow-2xl">
-                <h4 className="text-2xl font-semibold mb-6 text-amber-100">📞 Kontak Langsung</h4>
+                <div className="text-amber-100 p-4 bg-black/30 rounded-xl hover:bg-black/50 transition-all duration-300">
+                  <div className="text-sm text-amber-200">WhatsApp</div>
+                  <a href={`tel:${profileData.phone}`} className="font-medium hover:text-amber-200">
+                    {profileData.phone}
+                  </a>
+                </div>
 
-                <div className="space-y-6">
-                  <div className="flex items-center text-amber-100 p-4 bg-black/30 rounded-xl hover:bg-black/50 transition-all duration-300 group">
-                    <div className="w-6 h-6 bg-amber-100 rounded-lg mr-4 flex items-center justify-center">
-                      <span className="text-black text-sm">📧</span>
-                    </div>
-                    <div>
-                      <div className="text-sm text-amber-200">Email</div>
-                      <a href={`mailto:${profileData.email}`} className="font-medium group-hover:text-amber-200 transition-colors">
-                        {profileData.email}
-                      </a>
-                    </div>
-                  </div>
+                <div className="text-amber-100 p-4 bg-black/30 rounded-xl hover:bg-black/50 transition-all duration-300">
+                  <div className="text-sm text-amber-200">linkedin</div>
+                  <a href={`tel:${profileData.linkedin}`} className="font-medium hover:text-amber-200">
+                    {profileData.linkedin}
+                  </a>
+                </div>
 
-                  <div className="flex items-center text-amber-100 p-4 bg-black/30 rounded-xl hover:bg-black/50 transition-all duration-300 group">
-                    <div className="w-6 h-6 bg-amber-200 rounded-lg mr-4 flex items-center justify-center">
-                      <span className="text-black text-sm">📱</span>
-                    </div>
-                    <div>
-                      <div className="text-sm text-amber-200">WhatsApp</div>
-                      <a href={`tel:${profileData.phone}`} className="font-medium group-hover:text-amber-200 transition-colors">
-                        {profileData.phone}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center text-amber-100 p-4 bg-black/30 rounded-xl hover:bg-black/50 transition-all duration-300 group">
-                    <div className="w-6 h-6 bg-amber-300 rounded-lg mr-4 flex items-center justify-center">
-                      <span className="text-black text-sm">📍</span>
-                    </div>
-                    <div>
-                      <div className="text-sm text-amber-200">Lokasi</div>
-                      <span className="font-medium">{profileData.location}</span>
-                    </div>
-                  </div>
+                <div className="text-amber-100 p-4 bg-black/30 rounded-xl hover:bg-black/50 transition-all duration-300">
+                  <div className="text-sm text-amber-200">Lokasi</div>
+                  <span className="font-medium">{profileData.location}</span>
                 </div>
               </div>
             </div>
@@ -399,7 +363,7 @@ export default function Home() {
             </div>
 
             <div className="border-t border-amber-100/20 pt-6">
-              <p className="text-amber-200/60">&copy; 2024 {profileData.name}. Dibuat dengan ❤️ menggunakan React & Tailwind CSS</p>
+              <p className="text-amber-200/60">&copy; 2025 {profileData.name}</p>
             </div>
           </div>
         </div>
