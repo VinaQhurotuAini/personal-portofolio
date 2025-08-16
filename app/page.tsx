@@ -146,20 +146,6 @@ export default function Home() {
                       </div>
                     </div>
                   </td>
-
-                  <td className="block md:table-cell w-full md:w-1/2 align-middle text-center mt-8 md:mt-0">
-                    {/* Profile Image with Enhanced Glow Effect */}
-                    <div className="flex justify-center">
-                      <div className="relative group">
-                        <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-amber-100 shadow-2xl relative transform transition-transform duration-500 group-hover:scale-105">
-                          {/* Enhanced glow effects */}
-                          <div className="absolute inset-0 rounded-full shadow-[0_0_80px_rgba(245,245,220,0.8)] animate-pulse"></div>
-                          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-100/20 to-transparent animate-pulse"></div>
-                          <img src="/IMG_5802.jpg" alt="Foto Profil Vina Qhurotu Aini" className="w-full h-full object-cover relative z-10" />
-                        </div>
-                      </div>
-                    </div>
-                  </td>
                 </tr>
               </tbody>
             </table>
