@@ -1,6 +1,12 @@
 "use client";
 import { useState } from "react";
 import TextType from "./components/TextType/TextType";
+import { Source_Code_Pro } from "next/font/google";
+
+const sourceCodePro = Source_Code_Pro({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +55,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-black font-sans">
+    <div className={`${sourceCodePro.className} min-h-screen overflow-x-hidden bg-black font-sans`}>
       {/* Navbar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-amber-100/20">
         <div className="max-w-6xl mx-auto px-4">
@@ -58,7 +64,7 @@ export default function Home() {
               <tr>
                 <td className="w-1/3">
                   {/* Logo */}
-                  <div className="text-amber-100 font-bold text-xl tracking-wide">{profileData.name}</div>
+                  <div className="text-amber-100 font-bold text-xl tracking-wide">Vina</div>
                 </td>
 
                 <td className="w-1/3 text-center">
@@ -109,16 +115,12 @@ export default function Home() {
           <div className="absolute bottom-20 left-20 w-96 h-96 bg-amber-100/5 rounded-full blur-3xl"></div>
 
           <div className="max-w-6xl mx-auto px-4 w-full relative z-10">
-            <table className="w-full">
-              <tbody>
-                <tr>
-                  <td className="w-1/2 align-middle pr-8">
+            <table className="w-full table-fixed border-separate border-spacing-0 md:table">
+              <tbody className="block md:table-row-group">
+                <tr className="block md:table-row">
+                  <td className="block md:table-cell w-full md:w-1/2 align-middle pr-0 md:pr-8">
                     {/* Text Content */}
                     <div className="text-amber-100">
-                      <div className="mb-6">
-                        <span className="inline-block bg-amber-100/20 text-amber-200 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">✨ Available for opportunities</span>
-                      </div>
-
                       <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{ minHeight: "4rem" }}>
                         <TextType text={`Halo, Saya ${profileData.name}`} />
                       </h1>
@@ -128,25 +130,31 @@ export default function Home() {
                       <p className="text-amber-200/90 mb-8 leading-relaxed text-lg max-w-lg">{profileData.description}</p>
 
                       <div className="flex flex-wrap gap-4">
-                        <a href="#contact" className="bg-amber-100 hover:bg-amber-200 text-black px-8 py-4 rounded-xl transition-all duration-300 font-semibold shadow-lg hover:shadow-amber-100/25 hover:scale-105">
-                          💼 Hubungi Saya
+                        <a
+                          href="https://drive.google.com/drive/folders/1_FZSFcCCmedYEvQv4zCRiribME-_jZ8_?usp=sharing"
+                          className="bg-amber-100 hover:bg-amber-200 text-black px-8 py-4 rounded-xl transition-all duration-300 font-semibold shadow-lg hover:shadow-amber-100/25 hover:scale-105"
+                        >
+                          CV
                         </a>
-                        <a href="#about" className="border border-amber-100/50 text-amber-100 hover:bg-amber-100/10 hover:border-amber-100 px-8 py-4 rounded-xl transition-all duration-300 backdrop-blur-sm">
-                          📖 Pelajari Lebih
+                        <a
+                          href="https://drive.google.com/drive/folders/15veIW5LcupB4zk0Yg_wyvu3H-Mq_3IF-?usp=sharing"
+                          className="border border-amber-100/50 text-amber-100 hover:bg-amber-100/10 hover:border-amber-100 px-8 py-4 rounded-xl transition-all duration-300 backdrop-blur-sm"
+                        >
+                          Transkip Nilai
                         </a>
                       </div>
                     </div>
                   </td>
 
-                  <td className="w-1/2 align-middle text-center">
+                  <td className="block md:table-cell w-full md:w-1/2 align-middle text-center mt-8 md:mt-0">
                     {/* Profile Image with Enhanced Glow Effect */}
                     <div className="flex justify-center">
                       <div className="relative group">
-                        <div className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-amber-100 shadow-2xl relative transform transition-transform duration-500 group-hover:scale-105">
+                        <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-amber-100 shadow-2xl relative transform transition-transform duration-500 group-hover:scale-105">
                           {/* Enhanced glow effects */}
                           <div className="absolute inset-0 rounded-full shadow-[0_0_80px_rgba(245,245,220,0.8)] animate-pulse"></div>
                           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-100/20 to-transparent animate-pulse"></div>
-                          <img src="/IMG_5802.jpg" alt="Foto Profil Vina Qhurotu Aini" className="w-full h-full object-cover relative z-10" />
+                          <img src="IMG_5802.jpg" alt="Foto Profil Vina Qhurotu Aini" className="w-full h-full object-cover relative z-10" />
                         </div>
                       </div>
                     </div>
