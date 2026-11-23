@@ -195,21 +195,11 @@ export default function Home() {
 
                 <div className="prose prose-lg text-gray-700 space-y-4">
                   <p className="leading-relaxed">
-                    Saya lulusan S1 <strong>Informatika</strong> Universitas Atma Jaya Yogyakarta (IPK 3.60) dengan pengalaman magang 1 tahun di <strong>PT Global Prima Utama (UIINET)</strong>.
+                    Saya senang bekerja di antara teknologi dan pengguna: memastikan sistem berjalan baik, menelusuri dan memperbaiki masalah, serta mengembangkan fitur yang benar-benar dibutuhkan.
                   </p>
 
                   <p className="leading-relaxed">
-                    Selama magang, saya menangani pengujian dan pengembangan fitur aplikasi kustom dan <strong>SIMRS</strong>, mendukung persiapan integrasi SATUSEHAT, serta menjadi asisten pengajar <strong>ERP Odoo</strong> untuk ±175
-                    mahasiswa.
-                  </p>
-
-                  <p className="leading-relaxed">
-                    Selain menguji, saya juga aktif mengembangkan aplikasi. Saya membangun beberapa modul SIMRS secara utuh, termasuk modul Gizi, dan mengembangkan sistem informasi klinik untuk tugas akhir menggunakan{" "}
-                    <strong>Laravel, MySQL, dan Python (Flask)</strong> yang kini sudah live.
-                  </p>
-
-                  <p className="leading-relaxed">
-                    Saya tertarik pada bidang IT support, application support, pengembangan aplikasi, dan sistem ERP, serta senang menjembatani kebutuhan pengguna dengan solusi teknis melalui kode, dokumentasi, dan pelatihan.
+                    Saya tertarik berkarier di bidang <strong>IT support, application support, pengembangan aplikasi, dan sistem ERP</strong>, dan terbiasa menyampaikan hal teknis kepada pengguna melalui dokumentasi dan pelatihan.
                   </p>
                 </div>
               </div>
@@ -225,12 +215,6 @@ export default function Home() {
                   <div className="flex items-start">
                     <span className="font-semibold text-black min-w-[120px]">Pendidikan:</span>
                     <span className="text-gray-700">{profileData.education}</span>
-                  </div>
-                  <div className="flex items-start">
-                    <span className="font-semibold text-black min-w-[120px]">Email:</span>
-                    <a href={`mailto:${profileData.email}`} className="text-gray-700 hover:text-black transition-colors break-all">
-                      {profileData.email}
-                    </a>
                   </div>
                   <div className="flex items-start">
                     <span className="font-semibold text-black min-w-[120px]">Lokasi:</span>
