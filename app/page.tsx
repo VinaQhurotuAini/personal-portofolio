@@ -24,23 +24,23 @@ export default function Home() {
   const profileData = {
     name: "Vina Qhurotu Aini",
     title: "IT Support · Application Support · ERP Odoo",
-    description: "Fresh graduate S1 Informatika UAJY dengan pengalaman magang 1 tahun di bidang IT support, pengujian aplikasi, dan ERP Odoo.",
+    description: "Fresh graduate S1 Informatika UAJY dengan pengalaman magang 1 tahun di bidang IT support, pengujian dan pengembangan aplikasi, serta ERP Odoo.",
     email: "vinaqhurotu@gmail.com", // samakan dengan email di CV
     phone: "082254561528",
     linkedin: "www.linkedin.com/in/vina-qhurotu-aini",
     location: "Yogyakarta, Indonesia",
     education: "S1 Informatika, Universitas Atma Jaya Yogyakarta (IPK 3.60)",
-    skills: ["Troubleshooting & Testing", "Postman (API Testing)", "ERP Odoo", "Laravel", "PHP", "MySQL", "Python (Flask)", "JavaScript", "React / Next.js", "HTML/CSS", "WordPress", "Dokumentasi Sistem"],
+    skills: ["Troubleshooting & Testing", "ERP Odoo", "Laravel", "PHP", "MySQL", "Python (Flask)", "JavaScript", "React / Next.js", "HTML/CSS", "WordPress", "Dokumentasi Sistem"],
     experience: [
       {
         company: "PT Global Prima Utama (UIINET)",
         role: "IT Support (Magang)",
         period: "Agu 2025 – Feb 2026",
         points: [
-          "Custom App BLPT: functional testing, dokumentasi bug, retesting, perbaikan bug, dan pembaruan fitur sesuai kebutuhan klien. Menyusun manual book dan menjadi trainer pelatihan sistem.",
-          "SIMRS: pengujian sistem, laporan sistem, penyesuaian fitur rumah sakit, dan pengembangan modul pola makan gizi. Mendukung persiapan integrasi SATUSEHAT dengan menyiapkan data uji, menguji respons API melalui Postman, dan membaca log untuk melacak bug.",
-          "Portal Berita FBE UII: instalasi dan setup WordPress, pengaturan struktur halaman dan konten, serta penyesuaian tampilan.",
-          "Training ERP Odoo: menyusun materi pelatihan untuk dosen dan mahasiswa serta menjadi asisten trainer.",
+          "Custom App BLPT: melakukan functional testing, dokumentasi bug, dan retesting. Memperbaiki bug, memperbarui fitur sesuai kebutuhan klien, menyusun manual book, dan menjadi trainer pelatihan sistem.",
+          "SIMRS (Sistem Informasi Manajemen Rumah Sakit): melakukan pengujian sistem, dokumentasi bug, retesting, dan laporan sistem. Membangun beberapa modul secara utuh (salah satunya modul Gizi), menyesuaikan fitur, dan menyusun manual book. Mendukung persiapan integrasi SATUSEHAT dengan menyiapkan data uji, menguji respons API melalui Postman, dan membaca log untuk melacak bug.",
+          "Portal Berita FBE UII: melakukan instalasi dan setup website WordPress, mengatur struktur halaman dan konten, serta menyesuaikan tampilan dengan kebutuhan klien.",
+          "Training ERP Odoo: menyusun materi pelatihan untuk dosen dan mahasiswa, menjadi asisten trainer, serta mendukung pelaksanaan training offline dan online.",
         ],
       },
       {
@@ -48,7 +48,7 @@ export default function Home() {
         role: "Asisten Pengajar ERP Odoo (Magang)",
         period: "Feb 2026 – Agu 2026",
         points: [
-          "Mendampingi praktikum 19 modul Odoo (alur transaksi dan konfigurasi modul) untuk 4 kelas Bisnis Digital dan 1 kelas Akuntansi Perpajakan, total ±175 mahasiswa.",
+          "Mendampingi praktikum 19 modul Odoo (alur transaksi dan konfigurasi modul) untuk 4 kelas Bisnis Digital (±40 mahasiswa per kelas) dan 1 kelas Akuntansi Perpajakan (15 mahasiswa), total ±175 mahasiswa.",
           "Membimbing mahasiswa saat praktikum dan membantu mengatasi kendala di sistem.",
           "Menyampaikan materi secara penuh, dari konsep hingga praktik, saat dosen berhalangan hadir.",
         ],
@@ -58,7 +58,7 @@ export default function Home() {
       {
         title: "Sistem Informasi Klinik My Beauty (Tugas Akhir)",
         description:
-          "Sistem informasi klinik kecantikan berbasis web dengan booking per sesi, rekam medis, pembayaran, dan laporan untuk 5 peran pengguna. Dilengkapi rekomendasi treatment berbasis Decision Tree via Flask API (akurasi 70,77%). Lulus 62/62 skenario black-box testing.",
+          "Menggantikan pencatatan manual (kertas, Excel, dan booking via WhatsApp) dengan sistem web Laravel dan MySQL: 32 use case untuk 5 peran pengguna, mencakup booking per sesi, rekam medis, pembayaran, hak akses, dan laporan Excel. Rekomendasi treatment memakai Decision Tree dari 323 data layanan via Flask API (akurasi 70,77%). 62/62 skenario black-box berhasil, diuji 34 pengguna sesuai peran.",
         technologies: ["Laravel", "MySQL", "Python", "Flask", "Decision Tree"],
         image: "mybeauty.png", // simpan screenshot sistem di folder public dengan nama ini
         demoUrl: "https://klinikmybeauty.my.id/",
@@ -203,7 +203,14 @@ export default function Home() {
                     mahasiswa.
                   </p>
 
-                  <p className="leading-relaxed">Saya tertarik pada bidang IT support, application support, dan sistem ERP, serta senang menjembatani kebutuhan pengguna dengan solusi teknis melalui dokumentasi dan pelatihan.</p>
+                  <p className="leading-relaxed">
+                    Selain menguji, saya juga aktif mengembangkan aplikasi. Saya membangun beberapa modul SIMRS secara utuh, termasuk modul Gizi, dan mengembangkan sistem informasi klinik untuk tugas akhir menggunakan{" "}
+                    <strong>Laravel, MySQL, dan Python (Flask)</strong> yang kini sudah live.
+                  </p>
+
+                  <p className="leading-relaxed">
+                    Saya tertarik pada bidang IT support, application support, pengembangan aplikasi, dan sistem ERP, serta senang menjembatani kebutuhan pengguna dengan solusi teknis melalui kode, dokumentasi, dan pelatihan.
+                  </p>
                 </div>
               </div>
 
@@ -288,7 +295,7 @@ export default function Home() {
             </div>
 
             <div className="text-center">
-              <p className="text-amber-200/70 max-w-3xl mx-auto text-lg leading-relaxed">💡 Berpengalaman di 19 modul ERP Odoo, termasuk Manufacturing, Inventory, Purchase, Quality, Maintenance, Sales, dan Accounting.</p>
+              <p className="text-amber-200/70 max-w-3xl mx-auto text-lg leading-relaxed">💡 Berpengalaman di 19 modul ERP Odoo: Manufacturing (MRP), Inventory, Purchase, Quality, Maintenance, Sales, CRM, POS, Accounting, Invoicing, Payroll, Employees, Project, dan lainnya.</p>
             </div>
           </div>
         </section>
@@ -414,7 +421,7 @@ export default function Home() {
           <div className="text-center">
             <div className="mb-4">
               <h3 className="text-2xl font-bold text-amber-100 mb-2">{profileData.name}</h3>
-              <p className="text-amber-200/70">IT Support | Lulusan Informatika UAJY</p>
+              <p className="text-amber-200/70">IT Support · Application Support · ERP Odoo | Lulusan Informatika UAJY</p>
             </div>
 
             <div className="border-t border-amber-100/20 pt-6">
