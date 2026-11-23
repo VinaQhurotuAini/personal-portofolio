@@ -61,7 +61,7 @@ export default function Home() {
           "Sistem informasi klinik kecantikan berbasis web dengan booking per sesi, rekam medis, pembayaran, dan laporan untuk 5 peran pengguna. Dilengkapi rekomendasi treatment berbasis Decision Tree via Flask API (akurasi 70,77%). Lulus 62/62 skenario black-box testing.",
         technologies: ["Laravel", "MySQL", "Python", "Flask", "Decision Tree"],
         image: "mybeauty.png", // simpan screenshot sistem di folder public dengan nama ini
-        demoUrl: "https://klinikmybeauty.my.id",
+        demoUrl: "https://klinikmybeauty.my.id/",
       },
       {
         title: "Personal Portfolio Website",
