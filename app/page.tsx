@@ -14,6 +14,7 @@ export default function Home() {
   const items = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
@@ -22,17 +23,49 @@ export default function Home() {
   // Data profil - ganti sesuai data Anda
   const profileData = {
     name: "Vina Qhurotu Aini",
-    title: "Software Developer",
-    description: "Selamat datang di personal web saya!👋",
-    email: "vinaaini70@gmail.com",
+    title: "IT Support · Application Support · ERP Odoo",
+    description: "Fresh graduate S1 Informatika UAJY dengan pengalaman magang 1 tahun di bidang IT support, pengujian aplikasi, dan ERP Odoo.",
+    email: "vinaqhurotu@gmail.com", // samakan dengan email di CV
     phone: "082254561528",
     linkedin: "www.linkedin.com/in/vina-qhurotu-aini",
     location: "Yogyakarta, Indonesia",
-    skills: ["HTML/CSS", "JavaScript", "React", "Node.js", "PHP", "MySQL"],
+    education: "S1 Informatika, Universitas Atma Jaya Yogyakarta (IPK 3.60)",
+    skills: ["Troubleshooting & Testing", "Postman (API Testing)", "ERP Odoo", "Laravel", "PHP", "MySQL", "Python (Flask)", "JavaScript", "React / Next.js", "HTML/CSS", "WordPress", "Dokumentasi Sistem"],
+    experience: [
+      {
+        company: "PT Global Prima Utama (UIINET)",
+        role: "IT Support (Magang)",
+        period: "Agu 2025 – Feb 2026",
+        points: [
+          "Custom App BLPT: functional testing, dokumentasi bug, retesting, perbaikan bug, dan pembaruan fitur sesuai kebutuhan klien. Menyusun manual book dan menjadi trainer pelatihan sistem.",
+          "SIMRS: pengujian sistem, laporan sistem, penyesuaian fitur rumah sakit, dan pengembangan modul pola makan gizi. Mendukung persiapan integrasi SATUSEHAT dengan menyiapkan data uji, menguji respons API melalui Postman, dan membaca log untuk melacak bug.",
+          "Portal Berita FBE UII: instalasi dan setup WordPress, pengaturan struktur halaman dan konten, serta penyesuaian tampilan.",
+          "Training ERP Odoo: menyusun materi pelatihan untuk dosen dan mahasiswa serta menjadi asisten trainer.",
+        ],
+      },
+      {
+        company: "PT Global Prima Utama (UIINET)",
+        role: "Asisten Pengajar ERP Odoo (Magang)",
+        period: "Feb 2026 – Agu 2026",
+        points: [
+          "Mendampingi praktikum 19 modul Odoo (alur transaksi dan konfigurasi modul) untuk 4 kelas Bisnis Digital dan 1 kelas Akuntansi Perpajakan, total ±175 mahasiswa.",
+          "Membimbing mahasiswa saat praktikum dan membantu mengatasi kendala di sistem.",
+          "Menyampaikan materi secara penuh, dari konsep hingga praktik, saat dosen berhalangan hadir.",
+        ],
+      },
+    ],
     projects: [
       {
+        title: "Sistem Informasi Klinik My Beauty (Tugas Akhir)",
+        description:
+          "Sistem informasi klinik kecantikan berbasis web dengan booking per sesi, rekam medis, pembayaran, dan laporan untuk 5 peran pengguna. Dilengkapi rekomendasi treatment berbasis Decision Tree via Flask API (akurasi 70,77%). Lulus 62/62 skenario black-box testing.",
+        technologies: ["Laravel", "MySQL", "Python", "Flask", "Decision Tree"],
+        image: "mybeauty.png", // simpan screenshot sistem di folder public dengan nama ini
+        demoUrl: "https://klinikmybeauty.my.id",
+      },
+      {
         title: "Personal Portfolio Website",
-        description: "Website portofolio pribadi yang menampilkan informasi tentang saya, proyek-proyek yang pernah saya buat, dan kontak.",
+        description: "Website portofolio pribadi yang menampilkan informasi tentang saya, pengalaman, proyek, dan kontak.",
         technologies: ["React", "Tailwind CSS", "Next.js"],
         image: "image1.png",
         codeUrl: "https://github.com/VinaQhurotuAini/personal-portofolio.git",
@@ -63,12 +96,12 @@ export default function Home() {
           <table className="w-full h-16">
             <tbody>
               <tr>
-                <td className="w-1/3">
+                <td className="w-1/4">
                   {/* Logo */}
                   <div className="text-amber-100 font-bold text-xl tracking-wide">Vina</div>
                 </td>
 
-                <td className="w-1/3 text-center">
+                <td className="w-1/2 text-center">
                   {/* Desktop Menu */}
                   <div className="hidden md:flex space-x-8 justify-center">
                     {items.map((item, index) => (
@@ -80,7 +113,7 @@ export default function Home() {
                   </div>
                 </td>
 
-                <td className="w-1/3 text-right">
+                <td className="w-1/4 text-right">
                   {/* Mobile Menu Button */}
                   <button className="md:hidden text-amber-100 hover:text-amber-300 transition-colors" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     <div className="w-6 h-6 flex flex-col justify-center space-y-1 ml-auto">
@@ -133,15 +166,11 @@ export default function Home() {
                       <div className="flex flex-wrap gap-4">
                         <a
                           href="https://drive.google.com/drive/folders/1_FZSFcCCmedYEvQv4zCRiribME-_jZ8_?usp=sharing"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="bg-amber-100 hover:bg-amber-200 text-black px-8 py-4 rounded-xl transition-all duration-300 font-semibold shadow-lg hover:shadow-amber-100/25 hover:scale-105"
                         >
                           CV
-                        </a>
-                        <a
-                          href="https://drive.google.com/drive/folders/15veIW5LcupB4zk0Yg_wyvu3H-Mq_3IF-?usp=sharing"
-                          className="border border-amber-100/50 text-amber-100 hover:bg-amber-100/10 hover:border-amber-100 px-8 py-4 rounded-xl transition-all duration-300 backdrop-blur-sm"
-                        >
-                          Transkip Nilai
                         </a>
                       </div>
                     </div>
@@ -166,14 +195,15 @@ export default function Home() {
 
                 <div className="prose prose-lg text-gray-700 space-y-4">
                   <p className="leading-relaxed">
-                    Saya adalah mahasiswa Program Studi <strong>Informatika</strong> di Universitas Atma Jaya Yogyakarta yang memiliki ketertarikan besar pada pengembangan perangkat lunak, terutama aplikasi web dan mobile.
+                    Saya lulusan S1 <strong>Informatika</strong> Universitas Atma Jaya Yogyakarta (IPK 3.60) dengan pengalaman magang 1 tahun di <strong>PT Global Prima Utama (UIINET)</strong>.
                   </p>
 
                   <p className="leading-relaxed">
-                    Saya senang mempelajari teknologi baru seperti <strong>React, Next.js, dan Laravel</strong>, serta aktif mengembangkan keterampilan melalui proyek pribadi maupun kerja tim.
+                    Selama magang, saya menangani pengujian dan pengembangan fitur aplikasi kustom dan <strong>SIMRS</strong>, mendukung persiapan integrasi SATUSEHAT, serta menjadi asisten pengajar <strong>ERP Odoo</strong> untuk ±175
+                    mahasiswa.
                   </p>
 
-                  <p className="leading-relaxed">Saya memiliki motivasi tinggi untuk terus belajar dan berkembang, serta semangat untuk memberikan kontribusi nyata di dunia teknologi.</p>
+                  <p className="leading-relaxed">Saya tertarik pada bidang IT support, application support, dan sistem ERP, serta senang menjembatani kebutuhan pengguna dengan solusi teknis melalui dokumentasi dan pelatihan.</p>
                 </div>
               </div>
 
@@ -186,12 +216,12 @@ export default function Home() {
                     <span className="text-gray-700 font-medium">{profileData.name}</span>
                   </div>
                   <div className="flex items-start">
-                    <span className="font-semibold text-black min-w-[120px]">Lahir:</span>
-                    <span className="text-gray-700">Yogyakarta, 5 Desember 2003</span>
+                    <span className="font-semibold text-black min-w-[120px]">Pendidikan:</span>
+                    <span className="text-gray-700">{profileData.education}</span>
                   </div>
                   <div className="flex items-start">
                     <span className="font-semibold text-black min-w-[120px]">Email:</span>
-                    <a href={`mailto:${profileData.email}`} className="text-gray-700 hover:text-black transition-colors">
+                    <a href={`mailto:${profileData.email}`} className="text-gray-700 hover:text-black transition-colors break-all">
                       {profileData.email}
                     </a>
                   </div>
@@ -205,6 +235,35 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Section: Experience */}
+        <section id="experience" className="bg-white py-20">
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold text-black mb-4">Pengalaman</h2>
+              <div className="w-24 h-1 bg-black mx-auto"></div>
+            </div>
+
+            <div className="space-y-8">
+              {profileData.experience.map((exp, index) => (
+                <div key={index} className="bg-amber-50 p-8 rounded-2xl border border-amber-200 shadow-lg">
+                  <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-4 gap-1">
+                    <div>
+                      <h3 className="text-2xl font-bold text-black">{exp.role}</h3>
+                      <p className="text-gray-700 font-medium">{exp.company}</p>
+                    </div>
+                    <span className="text-sm font-semibold text-black bg-amber-100 px-3 py-1 rounded-full self-start md:self-auto">{exp.period}</span>
+                  </div>
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700 leading-relaxed">
+                    {exp.points.map((point, pointIndex) => (
+                      <li key={pointIndex}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Section: Skills */}
         <section id="skills" className="min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-black to-gray-900 py-20 relative overflow-hidden">
           {/* Background decoration */}
@@ -214,7 +273,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold text-amber-100 mb-4">Keahlian Saya</h2>
               <div className="w-24 h-1 bg-amber-100 mx-auto mb-6"></div>
-              <p className="text-amber-200/80 text-lg max-w-2xl mx-auto">Teknologi dan tools yang saya kuasai dalam pengembangan perangkat lunak</p>
+              <p className="text-amber-200/80 text-lg max-w-2xl mx-auto">Kemampuan dan tools yang saya gunakan dalam pekerjaan IT dan pengembangan sistem</p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
@@ -229,9 +288,7 @@ export default function Home() {
             </div>
 
             <div className="text-center">
-              <p className="text-amber-200/70 max-w-3xl mx-auto text-lg leading-relaxed">
-                💡 Saya terus belajar dan mengembangkan keahlian untuk mengikuti perkembangan teknologi terbaru dalam dunia web development dan siap menghadapi tantangan proyek yang kompleks.
-              </p>
+              <p className="text-amber-200/70 max-w-3xl mx-auto text-lg leading-relaxed">💡 Berpengalaman di 19 modul ERP Odoo, termasuk Manufacturing, Inventory, Purchase, Quality, Maintenance, Sales, dan Accounting.</p>
             </div>
           </div>
         </section>
@@ -242,11 +299,11 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold text-black mb-4">Project Saya</h2>
               <div className="w-24 h-1 bg-black mx-auto mb-6"></div>
-              <p className="text-gray-700 text-lg max-w-3xl mx-auto">🚀 Berikut adalah beberapa project yang pernah saya kerjakan. Setiap project dibuat dengan teknologi terkini dan mengutamakan user experience yang baik.</p>
+              <p className="text-gray-700 text-lg max-w-3xl mx-auto">🚀 Beberapa project yang pernah saya kerjakan, dari tugas akhir hingga project kuliah.</p>
             </div>
 
             {/* Project Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {profileData.projects.map((project, index) => (
                 <div key={index} className="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-amber-200/50 hover:scale-105 flex flex-col h-full">
                   {/* Project Image */}
@@ -272,16 +329,28 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Action Button */}
-                    <div className="flex">
-                      <a
-                        href={project.codeUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 bg-black hover:bg-gray-800 text-amber-100 text-center py-3 px-6 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                      >
-                        🔗 View Code
-                      </a>
+                    {/* Action Buttons */}
+                    <div className="flex gap-3">
+                      {project.demoUrl && (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 bg-amber-100 hover:bg-amber-200 text-black text-center py-3 px-6 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                        >
+                          🌐 Live Demo
+                        </a>
+                      )}
+                      {project.codeUrl && (
+                        <a
+                          href={project.codeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 bg-black hover:bg-gray-800 text-amber-100 text-center py-3 px-6 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                        >
+                          🔗 View Code
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -317,7 +386,7 @@ export default function Home() {
 
                 <div className="text-amber-100 p-4 bg-black/30 rounded-xl hover:bg-black/50 transition-all duration-300">
                   <div className="text-sm text-amber-200">WhatsApp</div>
-                  <a href={`tel:${profileData.phone}`} className="font-medium hover:text-amber-200">
+                  <a href={`https://wa.me/62${profileData.phone.slice(1)}`} target="_blank" rel="noopener noreferrer" className="font-medium hover:text-amber-200">
                     {profileData.phone}
                   </a>
                 </div>
@@ -345,11 +414,11 @@ export default function Home() {
           <div className="text-center">
             <div className="mb-4">
               <h3 className="text-2xl font-bold text-amber-100 mb-2">{profileData.name}</h3>
-              <p className="text-amber-200/70">Software Developer | Mahasiswa Informatika</p>
+              <p className="text-amber-200/70">IT Support | Lulusan Informatika UAJY</p>
             </div>
 
             <div className="border-t border-amber-100/20 pt-6">
-              <p className="text-amber-200/60">&copy; 2025 {profileData.name}</p>
+              <p className="text-amber-200/60">&copy; 2026 {profileData.name}</p>
             </div>
           </div>
         </div>
